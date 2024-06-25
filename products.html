@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page</title>
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        header {
+        background:linear-gradient(to right,#090909,#495A63,#686868);
+        padding: 0PX;
+        text-align: center;
+        }
+        #Logo {
+        width: 130px;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        }
+        .menu section {
+        height: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .menu {
+        background:linear-gradient(to right,#090909,#495A63,#686868);
+        list-style-type: none; /* Eliminar viñetas de la lista */
+        display: flex;/* Alinear elementos horizontalmente */
+        text-align: left;
+        justify-content: space-between;
+        }
+        .menu li {
+        margin: 0;
+        }
+        .menu a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        }
+        .menu a:hover{
+        background-color: #c0bebe;
+        }
+        .search {
+        text-align: right;
+        padding: 20px;
+        display: inline-block;
+        display: flex;
+        padding-bottom: 0;
+        }
+        input[type="text"] {
+        flex: 1;
+        padding: 5px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-right: 10px;
+        }
+
+        .Search-button {
+        padding: 5px 5px;
+        font-size: 12px;
+        background:linear-gradient(to right,#EC8669,#D77B8A,#339DCC );;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        }
+        /*TEXT*/
+        .h1Welcome{
+        font-size: 40px;
+        color: #000000;
+        margin-bottom: 20px;
+        text-align: center;
+        }
+        .pSubtitle {
+        font-size: 15px;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        }
+
+        .Goals ul li{
+        list-style-type:circle; /* Cambia el tipo de viñeta */
+        padding-left: 10px; /* Espacio a la izquierda para las viñetas */
+        text-align: left;
+        }
+
+        h2{
+        font-size: 25px;
+        color: #333;
+        background-color: #03f15600;
+        text-align: left;
+        padding: 0px;
+        margin: 0;
+        }
+
+        .Container {
+        display: flex;
+        height: 100%; 
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        }
+        main {
+        background-color: #D9D9D9;
+        width: 60%;
+        padding: 10px;
+        overflow: auto;
+        }
+        .MainProducts {
+        flex: 1;
+        background-color: #EDEDED; /* Color de fondo del contenido principal */
+        padding-bottom: 50px;/*espacio de las letras con el borde*/
+
+        }
+        #Computer,#Tablets,
+        #audio,#Graphiccard,#keyboardMice,
+        #Laptop,#Monitor,#Networking,#Pheripheral,#PrintingScanning,#Software,#Storage,#Tablets{
+        display:flex;
+        flex-wrap: flex;
+        text-align: center;
+        margin: 10px;
+        padding-top: 0px;
+        padding-left: 50px;
+        width: 150px;
+        }
+        .products {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;   
+        }
+        .product {
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        }
+        .product img {   
+        width: 100px; /* Ancho de la imagen */
+        height: 80px;
+        cursor: pointer; /* Altura automática para mantener las proporciones originales */
+        border-radius: 20px;
+        padding-bottom: 0;
+        margin: 0;
+        }
+        .product img:hover{ 
+        background-color: #ccc;
+        }
+
+        aside {
+        background-color: #bebebe;
+        width: 40%;
+        padding: 10px;
+        overflow: auto;
+        }
+        .Purchases {
+        width: 100%;
+        border-collapse: collapse;
+        }
+
+        td {
+        padding: 8px;
+        margin-inline-end: auto;
+        border-bottom: 1px solid #343232;
+        }
+
+        td:first-child {
+        font-weight: bold;
+        }
+
+        button[type="button"] {
+        padding: 10px 90px;
+        background-color: #1fa225;
+        color: #fcf8f8;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        button:hover[type="button"] {
+        background-color: #45a049;
+        }
+
+        footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 0px;
+        padding-top: auto;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 35px;
+        overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="Logo" src="Img/logonofondo.png" alt="Logo">
+    </header>
+    <div class="menu section">
+        <nav>
+            <ul class="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Register.html">Register</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form action="#" method="get">
+                <input type="text" id="Search" placeholder="Type..." title="search">
+                <button type="submit" class="Search-button"><b>Search</b></button>
+            </form>
+        </div>
+    </div>
+    <div class="Container">
+        <main>
+            <h1 class="h1Welcome">Products we sell</h1>
+            <p class="pSubtitle">Computer Force sells products in the following categories:</p>
+
+            <h2 class="h2category">Computers</h2>
+            <section id="Computer">
+                <div class="product">
+                    <img src="img/computer/Lenovo.jpg" alt="Producto 1">
+                    <p>Lenovo Computer</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/HP-ProOne-400-G4-1.jpg" alt="Producto 2">
+                    <p>HP Computer</p>
+                </div>
+            </section>
+            <h2 class="h2category">Laptops</h2>
+            <section id="Laptop">
+                <div class="product">
+                    <img src="img/computer/hp.png" alt="Producto 1">
+                    <p>HP Laptop</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/lenvo.jpg" alt="Producto 2">
+                    <p>Lenovo Laptop</p>
+                </div>
+            </section>
+            <h2 class="h2category">Monitors</h2>
+            <section id="Monitor">
+                <div class="product">
+                    <img src="img/computer/azus.png" alt="Producto 1">
+                    <p>Asus Mounitor</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/monitor.png" alt="Producto 2">
+                    <p>HP Monitor</p>
+                </div>        
+            </section>
+            <h2 class="h2category"> Printing & Scanning</h2>
+            <section id="PrintingScanning">
+                <div class="product">
+                    <img src="img/computer/canon.png" alt="Producto 1">
+                    <p>Canon Printing & Scanning</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/epson.png" alt="Producto 2">
+                    <p>Epson Printing & Scanning</p>
+                </div>        
+            </section>
+            <h2 class="h2category">Software</h2>
+            <section id="Software">
+                <div class="product">
+                    <img src="img/computer/avast.png" alt="Producto 1">
+                    <p>Avast Antivirus</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/avg.png" alt="Producto 2">
+                    <p>AVG Antivirus</p>
+                </div>        
+            </section>
+            <h2 class="h2category">Tablets</h2>
+            <section id="Tablets">
+                <div class="product">
+                    <img src="img/computer/tablets.png" alt="Producto 1">
+                    <p>Tablets</p>
+                </div>
+            </section>
+            <h2 class="h2category">Graphics Cards</h2>
+            <section id="Graphiccard">
+                <div class="product">
+                    <img src="img/computer/graphiccards.png" alt="Producto 1">
+                    <p>Graphic card</p>               
+                </div>      
+            </section>
+            <h2 class="h2category">Audio</h2>
+            <section id="audio">
+                <div class="product">
+                    <img src="img/computer/earphones.png" alt="Producto 1">
+                    <p>Earphones</p>
+                </div>
+                <div class="product">
+                    <img src="img/computer/bose.png" alt="Producto 1">
+                    <p>Speaker</p>
+                </div>                 
+            </section>
+            <h2 class="h2category">Pheripheral</h2>
+            <section id="Pheripheral">
+                <div class="product">
+                    <img src="img/computer/webcam.png" alt="Producto 1">
+                    <p>Web Cam</p>               
+                </div>
+            </section>
+            <h2 class="h2category">Storage</h2>
+            <section id="Storage">
+                <div class="product">
+                    <img src="img/computer/usb.png" alt="Producto 1">
+                    <p>USB</p>               
+                </div>
+            </section>
+            <h2 class="h2category">Keyboard & Mice</h2>
+            <section id="keyboardMice">
+                <div class="product">
+                    <img src="img/computer/keyboard.jpg" alt="Producto 1">
+                    <p>Keyboard & Mice</p>  
+                </div>
+            </section>
+            <h2 class="h2category">Networking</h2>
+            <section id="Networking">
+                <div class="product">
+                    <img src="img/computer/networking.png" alt="Producto 1">
+                    <p>Networking</p>  
+                </div>
+        </main>
+        <aside>
+            <h2>Purchases</h2>
+            <table class="Purchases">
+                <tr>
+                    <td>0 items.</td>
+                    <td>Cart sub-total: $0.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button">Go to Checkout</button></td>
+                </tr>
+            </table> 
+        </aside>
+    </div>
+    <footer>
+        <p class="footer">Copyright © 2024 - Karol Perez</p>
+    </footer>
+</body>
+</html>
